@@ -1,4 +1,4 @@
-# Kenshi Online (Rust Edition) 🦀
+# Kenshi Online 🦀
 
 Rewrite complete of the Kenshi Multiplayer mod in Rust. High performance, memory safety, and modern networking.
 
@@ -49,14 +49,13 @@ Use the launcher to start Kenshi and inject the mod:
 ```
 *Note: Ensure `kenshi_mod.dll` is correctly pointed to.*
 
-## 🛠 Features (Migrated from C++)
+## 🛠 Features
 - **Async Networking**: Validated `tokio` based TCP communication.
 - **Structured Packets**: `serde` serialization for robust data exchange.
 - **Memory Safety**: Rust ownership model prevents common crash bugs found in the C++ version.
 - **Hooking Architecture**: Modular hooking system ready for MinHook integration.
 
 ## ⚠️ Status
-This is a **structural migration**.
 - **Memory Scanning**: Offsets are defined but dynamic scanning needs implementation.
 - **Rendering**: ImGui overlay placeholder is in place.
 - **Gameplay**: Basic position sync is implemented in the protocol.
