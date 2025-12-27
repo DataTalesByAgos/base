@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "kenshi_protocol",
+    "kenshi_server",
+    "kenshi_launcher",
+    "kenshi_mod",
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

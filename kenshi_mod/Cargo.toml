@@ -1,0 +1,25 @@
+[package]
+name = "kenshi_mod"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+kenshi_protocol = { path = "../kenshi_protocol" }
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Console", 
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Dxgi",
+    "Win32_System_Memory"
+] }
+detour = "0.9" # implementation of MS Detours
+once_cell = "1.18"
+parking_lot = "0.12"
+imgui = "0.11"
+imgui-dx11-renderer = "0.8" 
+# Note: In a real scenario we might need specific versions or forks for DirectX hooking

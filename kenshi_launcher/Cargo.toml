@@ -1,0 +1,12 @@
+[package]
+name = "kenshi_launcher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+kenshi_protocol = { path = "../kenshi_protocol" }
+clap = { version = "4.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+dll-syringe = "0.15" # For DLL injection
+anyhow = "1.0"
+windows = { version = "0.52", features = ["Win32_System_Diagnostics_ToolHelp", "Win32_Foundation"] }
